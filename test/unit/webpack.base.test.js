@@ -6,13 +6,19 @@ describe("test webpack.base.js case", () => {
   console.log(baseConfig);
   it("entry", () => {
     assert.equal(
-      baseConfig.entry.index,
-      "/Users/sj/Documents/Documents/webpack/myLoader/builder-webpack/test/smoke/template/src/index/index.js"
+      baseConfig.entry.index.includes("test/smoke/template/src/index/index.js"),
+      true
     );
     assert.equal(
-      baseConfig.entry.search,
-      "/Users/sj/Documents/Documents/webpack/myLoader/builder-webpack/test/smoke/template/src/search/index.js"
+      baseConfig.entry.search.includes(
+        "test/smoke/template/src/search/index.js"
+      ),
+      true
     );
+    // assert.equal(
+    //   baseConfig.entry.search,
+    //   "/Users/sj/Documents/Documents/webpack/myLoader/builder-webpack/test/smoke/template/src/search/index.js"
+    // );
   });
 
   it("output", () => {
