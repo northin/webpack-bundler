@@ -6,6 +6,12 @@
   "directories": {
     "lib": "lib"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "scripts": {
     "eslint": "./node_modules/.bin/eslint lib/ --fix ",
     "test": "./node_modules/.bin/_mocha",
@@ -14,11 +20,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "assert": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "glob-all": "^3.2.1",
+    "husky": "^4.2.5",
     "internal-ip": "^6.0.0",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
