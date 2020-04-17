@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    ${ require("raw-loader!../../meta.html") }
+    <title>learn webpack2</title>
+  </head>
+  <script src="https://cdn.bootcss.com/react/16.13.1/umd/react.production.min.js"></script>
+  <script src="https://cdn.bootcss.com/react-dom/16.13.1/umd/react-dom.production.min.js"></script>
+  <script>
+    ${ require("raw-loader!babel-loader!../../node_modules/lib-flexible/flexible.js") }
+  </script>
+  <body>
+    <div id="root"><!-- HTML_PLACEHOLDER --></div>
+  </body>
+</html>
