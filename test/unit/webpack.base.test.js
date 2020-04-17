@@ -23,8 +23,9 @@ describe("test webpack.base.js case", () => {
 
   it("output", () => {
     assert.equal(
-      baseConfig.output.path,
-      "/Users/sj/Documents/Documents/webpack/myLoader/builder-webpack/test/smoke/template/dist"
+      baseConfig.output.path.includes("test/smoke/template/dist"),
+      true
+      // "/Users/sj/Documents/Documents/webpack/myLoader/builder-webpack/test/smoke/template/dist"
     );
   });
 });
